@@ -1,0 +1,88 @@
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe.config
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.pdb
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DanhMucSP.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Doimatkhau.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DoiQuyen.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DangNhapHeThong.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.HuongDan.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhachHang.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhoHang.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.MainMenu.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NguoiDung.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhaCC.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhanVien.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhapXuat.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Properties.Resources.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.SANPHAM.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.ThemTaiKhoan.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.GenerateResource.Cache
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csprojResolveAssemblyReference.cache
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe.config
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.pdb
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csprojResolveAssemblyReference.cache
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DanhMucSP.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Doimatkhau.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DoiQuyen.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DangNhapHeThong.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.HuongDan.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhachHang.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhoHang.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.MainMenu.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NguoiDung.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhaCC.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhanVien.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhapXuat.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Properties.Resources.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.SANPHAM.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.ThemTaiKhoan.resources
+C:\Users\MSII\Desktop\BaiTapTrenLop\Thuc Tap Nhom\QLKhoHang-master(bainop)\QLKhoHang-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.GenerateResource.Cache
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe.config
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.pdb
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DanhMucSP.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Doimatkhau.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DoiQuyen.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DangNhapHeThong.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.HuongDan.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhachHang.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhoHang.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.MainMenu.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NguoiDung.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhaCC.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhanVien.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhapXuat.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Properties.Resources.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.SANPHAM.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.ThemTaiKhoan.resources
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
+C:\Users\PC\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe.config
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.pdb
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DanhMucSP.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Doimatkhau.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DoiQuyen.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.DangNhapHeThong.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.HuongDan.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhachHang.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.KhoHang.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.MainMenu.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NguoiDung.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhaCC.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhanVien.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.NhapXuat.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Properties.Resources.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.SANPHAM.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.ThemTaiKhoan.resources
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.GenerateResource.cache
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
+C:\Users\Nguyen Anh Tuyet\Desktop\ThucTapNhom\QuanLyKho-master\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
