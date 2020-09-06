@@ -46,7 +46,7 @@ namespace QuanLyKhoHang
                 MainMenu.Quyenhan = QuyenHan;
                 NguoiDung.QuyenHan = QuyenHan;
                 NguoiDung.TenDangNhap = tbx_username.Text;
-               // HuongDan.TenDangNhap = tbx_username.Text;
+                // HuongDan.TenDangNhap = tbx_username.Text;
                 Doimatkhau.USERNAME = tbx_username.Text;
                 DoiQuyen.USERNAME = tbx_username.Text;
                 Doimatkhau.QUYENHAN = QuyenHan;
@@ -69,17 +69,60 @@ namespace QuanLyKhoHang
 
         private void tbx_password_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_dangnhap.Focus();
+                Connection acc = new Connection();
+                string user = tbx_username.Text.Trim();
+                string pass = tbx_password.Text.Trim();
+                SqlDataReader reader = acc.ExecuteReader("select USERNAME,PASSWORD from DANGNHAP where USERNAME='" + user + "' and PASSWORD='" + pass + "'");
+                if (reader.Read() == true)
+                {
+                    QH(tbx_username.Text);
+                    MainMenu.Quyenhan = QuyenHan;
+                    NguoiDung.QuyenHan = QuyenHan;
+                    NguoiDung.TenDangNhap = tbx_username.Text;
+                    // HuongDan.TenDangNhap = tbx_username.Text;
+                    Doimatkhau.USERNAME = tbx_username.Text;
+                    DoiQuyen.USERNAME = tbx_username.Text;
+                    Doimatkhau.QUYENHAN = QuyenHan;
+                    ThemTaiKhoan.Username = tbx_username.Text;
+                    //lb_STT.Text = "Đăng Nhập Thành Công!";
+                    MessageBox.Show("Bạn Đang Là: " + QuyenHan + "");
+                    this.Hide();
+                    MainMenu menu = new MainMenu();
+
+
+                    menu.ShowDialog();
+                }
+                else
+                {
+                    //lb_STT.Text = "Sai Thông Tin Đăng Nhập! Vui Lòng Nhập Lại!";
+                    tbx_username.Clear();
+                    tbx_password.Clear();
+                    tbx_username.Focus();
+                }
+
+            }
         }
 
         private void chb_showpass_CheckedChanged(object sender, EventArgs e)
         {
-            
+            //this.tbx_password.PasswordChar = this.chb_showpass.Checked ? char.MinValue : '*';
+            if (this.chb_showpass.Checked) this.tbx_password.PasswordChar = '\0';
+            else this.tbx_password.PasswordChar = '*';
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
-           
+            if (MessageBox.Show("Bạn Chắc Chắn Muốn Thoát?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+
+            }
         }
 
     }
