@@ -20,12 +20,33 @@ namespace QuanLyKhoHang
         }
         private string[] DS_PhanLoai = new string[] { "Hàng Mới Quốc Tế", "Hàng Cũ Quốc Tế", "Hàng Xách Tay", "Hàng Xách Tay Cũ" };
         Connection acc = new Connection();
-        
+        private int key = 0;
+        public static string filepart = "";
+        private string filename;
+        private string MANCC;
+        private string MADM;
         public void ConverttoString(DateTime dt)
         {
 
         }
-        
+        public void Disable()
+        {
+            tbx_tensp.Enabled = false; txb_madm.Enabled = false; txb_ncc.Enabled = false; txb_phanloai.Enabled = false; txb_serial.Enabled = false;
+            txb_soluong.Enabled = false; txb_giasp.Enabled = false; button8.Enabled = false; txb_ghichu.Enabled = false;
+            dtpicker_nsx.Enabled = false; dtpicker_hsd.Enabled = false;
+        }
+        public void Enable()
+        {
+            tbx_tensp.Enabled = true; txb_madm.Enabled = true; txb_ncc.Enabled = true; txb_phanloai.Enabled = true; txb_serial.Enabled = true;
+            txb_soluong.Enabled = false; txb_giasp.Enabled = true; button8.Enabled = true; txb_ghichu.Enabled = true;
+            dtpicker_nsx.Enabled = true; dtpicker_hsd.Enabled = true;
+        }
+        public void cleartext()
+        {
+            txb_giasp.Clear(); txb_madm.ResetText();
+            txb_ghichu.Clear(); txb_ncc.ResetText(); txb_phanloai.Clear(); tbx_masp.Clear();
+            tbx_tensp.Clear(); txb_serial.Clear(); txb_soluong.Value = 0; pictureBox_sanpham.Image = null; filepart = "";
+        }
         
         public DataTable ThongTinNCC(string TEXT)
         {
