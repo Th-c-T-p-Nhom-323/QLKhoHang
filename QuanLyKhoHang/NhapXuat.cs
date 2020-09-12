@@ -173,37 +173,80 @@ namespace QuanLyKhoHang
             txb_makhoPX.Enabled = true;
             txb_ghichuPX.Enabled = true;
         }
-        public DataTable ThongTinKHOPX(string TEXT)
-        {
-            
-        }
-        public DataTable ThongTinKHOPN(string TEXT)
-        {
-           
-        }
-        public DataTable ThongTinSPPX(string TEXT)
-        {
-        }
-        public DataTable ThongTinSPPN(string TEXT)
-        {
-            
-        }
-        public DataTable ThongTinKH(string TEXT)
-        {
-            
-        }
-        public DataTable ThongTinNVXUAT(string TEXT)
-        {
-        }
-        public DataTable ThongTinNVNHAP(string TEXT)
-        {
-            
-        }
-        public DataTable ThongTinNCC(string TEXT)
-        {
-            
-        }
-        private void button3_Click(object sender, EventArgs e)
+          public DataTable ThongTinKHOPX(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + TEXT + "%'");
+               while (a.Read())
+               {
+                    MAKHOPX = a["MAKHO"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinKHOPN(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + TEXT + "%'");
+               while (a.Read())
+               {
+                    MAKHOPN = a["MAKHO"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinSPPX(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MASP FROM SANPHAM WHERE TENSP LIKE N'" + TEXT + "%'");
+               while (a.Read())
+               {
+                    MASPPX = a["MASP"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinSPPN(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MASP FROM SANPHAM WHERE TENSP LIKE N'" + TEXT + "%'");
+               while (a.Read())
+               {
+                    MASPPN = a["MASP"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinKH(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MAKH FROM KHACHHANG WHERE TENKH LIKE N'" + TEXT + "%'");
+
+               while (a.Read())
+               {
+                    MAKH = a["MAKH"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinNVXUAT(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MANV FROM NHANVIEN WHERE TENNV LIKE N'" + TEXT + "%'");
+               while (a.Read())
+               {
+                    NVXUAT = a["MANV"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinNVNHAP(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MANV FROM NHANVIEN WHERE TENNV LIKE N'" + TEXT + "%'");
+               while (a.Read())
+               {
+                    NVNHAP = a["MANV"].ToString().Trim();
+               }
+               return null;
+          }
+          public DataTable ThongTinNCC(string TEXT)
+          {
+               SqlDataReader a = acc.ExecuteReader("Select MANCC FROM NHACUNGCAP WHERE TENNHACC LIKE N'%" + TEXT + "%'");
+               while (a.Read())
+               {
+                    MANCC = a["MANCC"].ToString().Trim();
+               }
+               return null;
+          }
+          private void button3_Click(object sender, EventArgs e)
         {
 
         }
