@@ -64,7 +64,7 @@ namespace QuanLyKhoHang
             cmd.Parameters.AddWithValue("MAKHO", txt_maKho.Text);
             cmd.Parameters.AddWithValue("TENKHO", txt_tenkho.Text);
             cmd.Parameters.AddWithValue("TONGSODMSP", txt_soluong.Text);
-            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);            
+            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);
             cmd.ExecuteNonQuery();
             con.Close();
             Show();
@@ -72,7 +72,19 @@ namespace QuanLyKhoHang
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            con.Open();
+            string sql = "SELECT FROM KHOHANG WHERE MAKHO = @MAKHO";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("MAKHO", txt_timkiem.Text);
+            cmd.Parameters.AddWithValue("TENKHO", txt_tenkho.Text);
+            cmd.Parameters.AddWithValue("TONGSODMSP", txt_soluong.Text);
+            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -82,17 +94,26 @@ namespace QuanLyKhoHang
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            MainMenu menu = new MainMenu();
+            menu.ShowDialog();
         }
 
         private void KhoHang_Load(object sender, EventArgs e)
         {
-            
+            Show();
+            txt_maKho.Text = dataGridView1.Rows[0].Cells["MAKHO"].Value.ToString();
+            txt_tenkho.Text = dataGridView1.Rows[0].Cells["TENKHO"].Value.ToString();
+            txt_soluong.Text = dataGridView1.Rows[0].Cells["TONGSODMSP"].Value.ToString();
+            txt_ghichu.Text = dataGridView1.Rows[0].Cells["GHICHU"].Value.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            txt_maKho.Text = dataGridView1.CurrentRow.Cells["MAKHO"].Value.ToString();
+            txt_tenkho.Text = dataGridView1.CurrentRow.Cells["TENKHO"].Value.ToString();
+            txt_soluong.Text = dataGridView1.CurrentRow.Cells["TONGSODMSP"].Value.ToString();
+            txt_ghichu.Text = dataGridView1.CurrentRow.Cells["GHICHU"].Value.ToString();
         }
     }
 }
