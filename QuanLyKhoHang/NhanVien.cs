@@ -126,11 +126,55 @@ namespace QuanLyKhoHang
             return null;
         }
 
-        //Chưa làm 
+      
         private void NhanVien_Load(object sender, EventArgs e)
         {
+            Disabletbx();
+            Enablebtn();
+            lbx_trangthai.Visible = false;
+            cbx_trangthai.Visible = false;
+            cbx_trangthai.Checked = false;
+            acc.AutoComplete(tbx_MaNV, "SELECT MANV FROM NHANVIEN");
+            acc.AutoCompletecbx(tbx_MaBP, "SELECT TENBP FROM BOPHAN", "TENBP");
+            acc.AutoComplete(tbx_chucvu, "SELECT CHUCVU FROM NHANVIEN");
 
-            
+            dgvNhanVien.DataSource = acc.Select_Data("Select NHANVIEN.TRANGTHAI, MANV, TENNV, EMAIL, NS, GT, NHANVIEN.DIENTHOAI, CHUCVU, HINHANH, DIACHI, LUONG, TENBP from NHANVIEN left join BOPHAN on BOPHAN.MABP = NHANVIEN.MABP WHERE NHANVIEN.TRANGTHAI = '1' order by GT asc");
+            dgvNhanVien.ClearSelection();
+            tbx_MaNV.Enabled = false;
+            rbtn_Nam.Checked = true;
+
+            dgvNhanVien.Columns["TRANGTHAI"].HeaderText = "TT";
+            dgvNhanVien.Columns["MANV"].HeaderText = "Mã Nhân Viên";
+            dgvNhanVien.Columns["TENNV"].HeaderText = "Nhân Viên";
+            dgvNhanVien.Columns["EMAIL"].HeaderText = "Email";
+            dgvNhanVien.Columns["NS"].HeaderText = "Ngày Sinh";
+            dgvNhanVien.Columns["GT"].HeaderText = "GT";
+            dgvNhanVien.Columns["DIENTHOAI"].HeaderText = "Điện Thoại";
+            dgvNhanVien.Columns["CHUCVU"].HeaderText = "Chức Vụ";
+            dgvNhanVien.Columns["HINHANH"].HeaderText = "Ảnh";
+            dgvNhanVien.Columns["DIACHI"].HeaderText = "Địa Chỉ";
+            dgvNhanVien.Columns["LUONG"].HeaderText = "Lương";
+            dgvNhanVien.Columns["TENBP"].HeaderText = "Bộ Phận";
+
+            dgvNhanVien.Columns["TRANGTHAI"].Width = 30;
+            dgvNhanVien.Columns["MANV"].Width = 70;
+            dgvNhanVien.Columns["GT"].Width = 60;
+            dgvNhanVien.Columns["TENNV"].Width = 150;
+            dgvNhanVien.Columns["TENBP"].Width = 170;
+            dgvNhanVien.Columns["EMAIL"].Width = 150;
+            dgvNhanVien.Columns["CHUCVU"].Width = 150;
+
+            dgvNhanVien.CurrentRow.Cells["TRANGTHAI"].ReadOnly = false;
+
+            if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
+            {
+                btn_xoa.Enabled = true;
+            }
+            else
+            {
+                btn_xoa.Enabled = false;
+            }
+
         }
 
         private void btn_them_Click(object sender, EventArgs e)
