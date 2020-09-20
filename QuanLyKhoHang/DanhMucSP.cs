@@ -38,10 +38,34 @@ namespace QuanLyKhoHang
             tbx_madm.Enabled = true; tbx_makho.Enabled = true; tbx_tendm.Enabled = true; tbx_ghichu.Enabled = true; tbx_tendm.Focus();
         }
 
-        //Chưa làm
+       
         private void DanhMucSP_Load(object sender, EventArgs e)
         {
-            
+            tbx_madm.Text = " ";
+            Disable();
+            bt_xoa.Enabled = true;
+            tbx_tendm.Focus();
+            con.AutoCompletecbx(tbx_makho, "SELECT TENKHO FROM KHOHANG", "TENKHO");
+            tbx_madm.Enabled = false;
+            dgvDANHMUC.DataSource = con.Select_Data("SELECT DM.MADANHMUC,TENDANHMUC,KHOHANG.TENKHO,DM.GHICHU from DANHMUC DM left join KHOHANG on KHOHANG.MAKHO=DM.MAKHO");
+            dgvDANHMUC.ClearSelection();
+
+            //hiển thị tiêu đề của các cột:
+            dgvDANHMUC.Columns[0].HeaderText = "Mã Danh Mục";
+            dgvDANHMUC.Columns[1].HeaderText = "Tên Danh Mục";
+            dgvDANHMUC.Columns[2].HeaderText = "Tên Kho";
+            dgvDANHMUC.Columns[3].HeaderText = "Ghi Chú";
+
+            //căn độ rộng cột:
+            dgvDANHMUC.Columns[1].Width = 200;
+            dgvDANHMUC.Columns[2].Width = 250;
+            dgvDANHMUC.Columns[3].Width = 300;
+
+
+            btn_ghinhan.Enabled = false;
+            bt_them.Enabled = true;
+            bt_xoa.Enabled = true;
+            bt_chophepsua.Enabled = true;
         }
 
         private void vềTtrangChủToolStripMenuItem_Click(object sender, EventArgs e)
