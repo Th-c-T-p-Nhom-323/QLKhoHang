@@ -291,7 +291,6 @@ namespace QuanLyKhoHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
             string sql;
             string email = txtemail.Text.Trim();
             string loi = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
@@ -362,29 +361,13 @@ namespace QuanLyKhoHang
             btnHuy.Enabled = true;
             btnLuu.Enabled = false;
             txtma.Enabled = false;
+
         }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
 
-            if (txtTimKiem.Text.Trim() == "")
-            {
-                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
-                return;
-            }
-            else
-            {
-                if (cbTimKiem.Text == "Mã khách hàng")
-                {
-                    DataGridView.DataSource = GetDataToTable("select * from KHACHHANG where MAKH like '%" + txtTimKiem.Text.Trim() + "%'");
-                }
-
-                if (cbTimKiem.Text == "Tên khách hàng")
-                {
-                    DataGridView.DataSource = GetDataToTable("select * from KHACHHANG where TENKH like '%" + txtTimKiem.Text.Trim() + "%'");
-                }
-
-            }
+           
         }
 
 
@@ -395,108 +378,12 @@ namespace QuanLyKhoHang
 
         private void cbTimKiem_Click(object sender, EventArgs e)
         {
-            cbTimKiem.DisplayMember = "Text";
-            cbTimKiem.ValueMember = "Value";
-
-            cbTimKiem.Items.Add(new { Text = "Mã khách hàng", Value = "Mã khách hàng" });
-            cbTimKiem.Items.Add(new { Text = "Tên khách hàng", Value = "Tên khách hàng" });
+           
         }
 
         private void btnIndanhsach_Click(object sender, EventArgs e)
         {
-            SaveFileDialog fsave = new SaveFileDialog();
-
-            fsave.Filter = "(Tất cả các tệp)|*.*|(các tệp excel)|*.xlsx";
-            fsave.ShowDialog();
-
-            if (fsave.FileName != "")
-            {
-                COMExcel.Application exApp = new COMExcel.Application();
-                COMExcel.Workbook exBook;
-                COMExcel.Worksheet exSheet;
-                COMExcel.Range exRange;
-
-                exBook = exApp.Workbooks.Add(COMExcel.XlWBATemplate.xlWBATWorksheet);
-                exSheet = exBook.Worksheets[1];
-                // Định dạng chung
-                exRange = exSheet.Cells[1, 1];
-                exRange.Range["A1:B3"].Font.Size = 14;
-                exRange.Range["A1:B3"].Font.Name = "Times new roman";
-                exRange.Range["A1:B3"].Font.Bold = true;
-                exRange.Range["A1:B3"].Font.ColorIndex = 5; //Màu xanh da trời
-
-                exRange.Range["A1:A1"].ColumnWidth = 7;
-
-                exRange.Range["B1:B1"].ColumnWidth = 15;
-
-                exRange.Range["A1:B1"].MergeCells = true;
-                exRange.Range["A1:B1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["A1:B1"].Value = "Quản lý kho hàng";
-
-                exRange.Range["A1: A100"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["D1: D100"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["F1: F100"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["G1: G100"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["H1: H100"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-
-                exRange.Range["A2:B2"].MergeCells = true;
-                exRange.Range["A2:B2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["A2:B2"].Value = "Khách Hàng";
-
-                exRange.Range["A3:B3"].MergeCells = true;
-                exRange.Range["A3:B3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-
-                exRange.Range["C2:E2"].Font.Size = 16;
-                exRange.Range["C2:E2"].Font.Name = "Times new roman";
-                exRange.Range["C2:E2"].Font.Bold = true;
-                exRange.Range["C2:E2"].Font.ColorIndex = 3; //Màu đỏ
-                exRange.Range["C2:E2"].MergeCells = true;
-                exRange.Range["C2:E2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["C2:E2"].Value = "Danh Sách Khách Hàng";
-
-                exRange.Range["A5"].ColumnWidth = 15;
-                exRange.Range["B5"].ColumnWidth = 25;
-                exRange.Range["C5"].ColumnWidth = 15;
-                exRange.Range["D5"].ColumnWidth = 15;
-                exRange.Range["E5"].ColumnWidth = 30;
-                exRange.Range["F5"].ColumnWidth = 15;
-                exRange.Range["G5"].ColumnWidth = 15;
-                exRange.Range["H5"].ColumnWidth = 15;
-
-
-                exRange.Range["A5:I5"].Font.Size = 14;
-                exRange.Range["A5:I5"].Font.Bold = true;
-                exRange.Range["A5:I5"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-
-                //Lấy tên cột dữ liệu
-                for (int i = 0; i < DataGridView.ColumnCount; i++)
-                {
-                    exSheet.Cells[5, i + 1] = DataGridView.Columns[i].HeaderText;
-                }
-                //Đổ dữ liệu vào sheet
-                for (int i = 0; i < DataGridView.RowCount; i++)
-                {
-                    for (int j = 0; j < DataGridView.ColumnCount; j++)
-                    {
-                        exSheet.Cells[i + 6, j + 1] = DataGridView.Rows[i].Cells[j].Value;
-                    }
-                }
-
-                DateTime d = DateTime.Now;
-                exRange.Range["C3:E3"].Value = "Hà Nội, ngày " + d.Day + " tháng " + d.Month + " năm " + d.Year;
-                exRange.Range["C3:E3"].MergeCells = true;
-                exRange.Range["C3:E3"].Font.Italic = true;
-                exRange.Range["C3:E3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-
-
-                exApp.Visible = true;
-
-                exBook.SaveAs(fsave.FileName);
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải nhập tên!");
-            }
+           
         }
 
       
@@ -513,55 +400,6 @@ namespace QuanLyKhoHang
 
         }
 
-        private void txtma_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                SendKeys.Send("{TAB}");
-        }
-
-        private void txtten_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                SendKeys.Send("{TAB}");
-        }
-
-        private void txtdc_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                SendKeys.Send("{TAB}");
-        }
-
-        private void txtsdt_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                SendKeys.Send("{TAB}");
-        }
-        private void txtemail_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                SendKeys.Send("{TAB}");
-        }
-
-        private void txtfax_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtGT_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                SendKeys.Send("{TAB}");
-        }
-
-        private void txtsdt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
+       
     }
 }
