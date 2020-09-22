@@ -173,80 +173,80 @@ namespace QuanLyKhoHang
             txb_makhoPX.Enabled = true;
             txb_ghichuPX.Enabled = true;
         }
-          public DataTable ThongTinKHOPX(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + TEXT + "%'");
-               while (a.Read())
-               {
-                    MAKHOPX = a["MAKHO"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinKHOPN(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + TEXT + "%'");
-               while (a.Read())
-               {
-                    MAKHOPN = a["MAKHO"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinSPPX(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MASP FROM SANPHAM WHERE TENSP LIKE N'" + TEXT + "%'");
-               while (a.Read())
-               {
-                    MASPPX = a["MASP"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinSPPN(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MASP FROM SANPHAM WHERE TENSP LIKE N'" + TEXT + "%'");
-               while (a.Read())
-               {
-                    MASPPN = a["MASP"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinKH(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MAKH FROM KHACHHANG WHERE TENKH LIKE N'" + TEXT + "%'");
+        public DataTable ThongTinKHOPX(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + TEXT + "%'");
+            while (a.Read())
+            {
+                MAKHOPX = a["MAKHO"].ToString().Trim();
+            }
+            return null;
+        }
+        public DataTable ThongTinKHOPN(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + TEXT + "%'");
+            while (a.Read())
+            {
+                MAKHOPN = a["MAKHO"].ToString().Trim();
+            }
+            return null;
+        }
+        public DataTable ThongTinSPPX(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MASP FROM SANPHAM WHERE TENSP LIKE N'" + TEXT + "%'");
+            while (a.Read())
+            {
+                MASPPX = a["MASP"].ToString().Trim();
+            }
+            return null; 
+        }
+        public DataTable ThongTinSPPN(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MASP FROM SANPHAM WHERE TENSP LIKE N'" + TEXT + "%'");
+            while (a.Read())
+            {
+                MASPPN = a["MASP"].ToString().Trim();
+            }
+            return null;
+        }
+        public DataTable ThongTinKH(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MAKH FROM KHACHHANG WHERE TENKH LIKE N'" + TEXT + "%'");
 
-               while (a.Read())
-               {
-                    MAKH = a["MAKH"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinNVXUAT(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MANV FROM NHANVIEN WHERE TENNV LIKE N'" + TEXT + "%'");
-               while (a.Read())
-               {
-                    NVXUAT = a["MANV"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinNVNHAP(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MANV FROM NHANVIEN WHERE TENNV LIKE N'" + TEXT + "%'");
-               while (a.Read())
-               {
-                    NVNHAP = a["MANV"].ToString().Trim();
-               }
-               return null;
-          }
-          public DataTable ThongTinNCC(string TEXT)
-          {
-               SqlDataReader a = acc.ExecuteReader("Select MANCC FROM NHACUNGCAP WHERE TENNHACC LIKE N'%" + TEXT + "%'");
-               while (a.Read())
-               {
-                    MANCC = a["MANCC"].ToString().Trim();
-               }
-               return null;
-          }
-          private void button3_Click(object sender, EventArgs e)
+            while (a.Read())
+            {
+                MAKH = a["MAKH"].ToString().Trim();
+            }
+            return null;
+        }
+        public DataTable ThongTinNVXUAT(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MANV FROM NHANVIEN WHERE TENNV LIKE N'" + TEXT + "%'");
+            while (a.Read())
+            {
+                NVXUAT = a["MANV"].ToString().Trim();
+            }
+            return null;
+        }
+        public DataTable ThongTinNVNHAP(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MANV FROM NHANVIEN WHERE TENNV LIKE N'" + TEXT + "%'");
+            while (a.Read())
+            {
+                NVNHAP = a["MANV"].ToString().Trim();
+            }
+            return null;
+        }
+        public DataTable ThongTinNCC(string TEXT)
+        {
+            SqlDataReader a = acc.ExecuteReader("Select MANCC FROM NHACUNGCAP WHERE TENNHACC LIKE N'%" + TEXT + "%'");
+            while (a.Read())
+            {
+                MANCC = a["MANCC"].ToString().Trim();
+            }
+            return null;
+        }
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
@@ -258,34 +258,174 @@ namespace QuanLyKhoHang
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-           
+            cleartextPN();
+            EnablePN();
+            bt_them.Enabled = false;
+            bt_xoa.Enabled = false;
+            button_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            keyn = 1;
         }
         //xoa 1 phieu nhap :
         private void bt_xoa_Click(object sender, EventArgs e)
         {
+            cleartextPN();
+            txb_maPN.Enabled = true;
+            bt_them.Enabled = false;
+            bt_xoa.Enabled = false;
+            button_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            keyn = 3;
         }
         //sua phieu nhap san pham:
         private void button_chophepsua_Click(object sender, EventArgs e)
         {
-           
+            EnablePN();
+            cleartextPN();
+            txb_maPN.Enabled = false;
+            bt_them.Enabled = false;
+            bt_xoa.Enabled = false;
+            button_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            keyn = 2;
         }
 
         private void btn_ghinhan_Click(object sender, EventArgs e)
         {
+            if (keyn == 1)
+            {
+                if (txb_nvnhap.Text == "" || txb_makhoPN.Text == "" || txb_mancc.Text == "")
+                {
+                    MessageBox.Show("Hãy điền đủ thông tin vào các ô");
+                    ngaynhap.Focus();
+                }
+                else
+                {
+                    var nvNhapitem = txb_nvnhap.GetItemText(txb_nvnhap.SelectedItem);
+                    ThongTinNVNHAP(nvNhapitem);
+                    var spNhapitem = txb_maspPN.GetItemText(txb_maspPN.SelectedItem);
+                    ThongTinSPPN(spNhapitem);
+                    var nccitem = txb_mancc.GetItemText(txb_mancc.SelectedItem);
+                    ThongTinNCC(nccitem);
+                    var khoitem = txb_makhoPN.GetItemText(txb_makhoPN.SelectedItem);
+                    ThongTinKHOPN(khoitem);
+                    DataTable dtnv = acc.CheckSql("select *from NHANVIEN WHERE TENNV like N'" + txb_nvnhap.Text + "'");
+                    DataTable dtkho = acc.CheckSql("SELECT *from KHOHANG WHERE TENKHO like N'" + txb_makhoPN.Text + "'");
+                    DataTable dtncc = acc.CheckSql("SELECT *FROM NHACUNGCAP WHERE TENNHACC like N'" + txb_mancc.Text + "'");
+                    if (dtnv.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Mã Nhân Viên Đã tồn tại", "Thông Báo");
+                        txb_nvnhap.Focus();
+                    }
+                    else if (dtkho.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Mã kho đã tồn tại", "Thông Báo");
+                        txb_makhoPN.Focus();
+
+                    }
+                    else if (dtncc.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Mã Nhà cung cấp đã tồn tại", "Thông  Báo");
+                        txb_makhoPN.Focus();
+                    }
+                    else
+                    {
+
+                        acc.THEMPHIEUNHAP(txb_maPN.Text, MAKHOPN, NVNHAP, ngaynhap.Value, MANCC, txb_ghichu.Text);
+                        SqlDataReader sda = acc.ExecuteReader("SELECT TOP 1 MAPN FROM PHIEUNHAPKHO ORDER BY MAPN DESC");
+                        if (sda.Read() == true)
+                        {
+                            acc.THEMCTPN(sda[0].ToString(), MASPPN, Convert.ToInt16(txb_soluongPN.Text), float.Parse(txb_tongtienPN.Text));
+                            /////
+                            acc.Tang_SoLuong(MASPPN, Convert.ToInt16(txb_soluongPN.Text));
+                        }
+                        PhieuNhap_Load(sender, e);
+                        dgv_phieunhap.ClearSelection();
+                    }
+                }
+            }
+            if (keyn == 2)
+            {
+                if (dgv_phieunhap.SelectedRows == null)
+                {
+                    MessageBox.Show("Hãy chọn 1 phiếu nhập để sửa");
+                }
+                else if (txb_nvnhap.Text == "" || txb_makhoPN.Text == "" || txb_mancc.Text == "" || txb_soluongPN.Text == "" || txb_tongtienPN.Text == "")
+                {
+                    MessageBox.Show("Hãy điền đủ thông tin vào các ô");
+                    ngaynhap.Focus();
+                }
+                else
+                {
+                    var nvNhapitem = txb_nvnhap.GetItemText(txb_nvnhap.SelectedItem);
+                    ThongTinNVNHAP(nvNhapitem);
+                    var spNhapitem = txb_maspPN.GetItemText(txb_maspPN.SelectedItem);
+                    ThongTinSPPN(spNhapitem);
+                    var nccitem = txb_mancc.GetItemText(txb_mancc.SelectedItem);
+                    ThongTinNCC(nccitem);
+                    var khoitem = txb_makhoPN.GetItemText(txb_makhoPN.SelectedItem);
+                    ThongTinKHOPN(khoitem);
+                    DataTable dtnv = acc.CheckSql("select *from NHANVIEN WHERE TENNV LIKE N'" + txb_nvnhap.GetItemText(txb_nvnhap.SelectedItem) + "'");
+                    DataTable dtkho = acc.CheckSql("SELECT *from KHOHANG WHERE TENKHO LIKE N'" + txb_makhoPN.GetItemText(txb_makhoPN.SelectedItem) + "'");
+                    DataTable dtncc = acc.CheckSql("SELECT *FROM NHACUNGCAP WHERE TENNHACC LIKE N'" + txb_mancc.GetItemText(txb_mancc.SelectedItem) + "'");
+                    if (dtnv.Rows.Count < 1)
+                    {
+                        MessageBox.Show(" Nhân Viên Không tồn tại", "Lỗi Nhập");
+                        txb_nvnhap.Focus();
+                    }
+                    else if (dtkho.Rows.Count < 1)
+                    {
+                        MessageBox.Show(" kho Không tồn tại", "Lỗi Nhập");
+                        txb_makhoPN.Focus();
+
+                    }
+                    else if (dtncc.Rows.Count < 1)
+                    {
+                        MessageBox.Show(" Nhà cung cấp Không tồn tại", "Lỗi Nhập");
+                        txb_makhoPN.Focus();
+                    }
+                    else
+                    {
+                        acc.SUAPHIEUNHAP(txb_maPN.Text, MAKHOPN, NVNHAP, ngaynhap.Value, MANCC, txb_ghichu.Text);
+                        acc.SUACTPN(txb_maPN.Text, MASPPN, Convert.ToInt16(txb_soluongPN.Text), float.Parse(txb_tongtienPN.Text));
+                        acc.Tang_SoLuong(MASPPN, Convert.ToInt16(txb_soluongPN.Text));
+                        PhieuNhap_Load(sender, e);
+                        dgv_phieunhap.ClearSelection();
+                        cleartextPN();
+                    }
+                }
+            }
+            if (keyn == 3)
+            {
+                if (txb_maPN.Text == "" || dgv_phieunhap.SelectedRows == null)
+                {
+                    MessageBox.Show("Hãy Chọn 1 phiếu nhập để xóa");
+                }
+                else if (MessageBox.Show("Bạn Có chắc chắn muốn xóa phiếu xuất", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    acc.XOAPHIEUNHAP(txb_maPN.Text);
+                    PhieuNhap_Load(sender, e);
+                    dgv_phieunhap.ClearSelection();
+                    cleartextPN();
+                }
+            }
         }
 
         private void btn_huy_Click(object sender, EventArgs e)
         {
-            
+            cleartextPN();
         }
 
         private void button_lammoi_Click(object sender, EventArgs e)
         {
-           
+            PhieuNhap_Load(sender, e);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            MainMenu menu = new MainMenu();
+            menu.ShowDialog();
         }
 
         private void dgv_phieuxuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
