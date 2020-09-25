@@ -210,7 +210,12 @@ namespace QuanLyKhoHang
         private void btnSua_Click(object sender, EventArgs e)
         {
             string sql;
-            
+            if (KHACHHANG.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             if (txtma.Text == "")
             {
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -400,10 +405,7 @@ namespace QuanLyKhoHang
 
         private void btnIndanhsach_Click(object sender, EventArgs e)
         {
-            SaveFileDialog fsave = new SaveFileDialog();
-
-            fsave.Filter = "(Tất cả các tệp)|*.*|(các tệp excel)|*.xlsx";
-            fsave.ShowDialog();
+            
 
             if (fsave.FileName != "")
             {
