@@ -368,24 +368,7 @@ namespace QuanLyKhoHang
         private void btnTim_Click(object sender, EventArgs e)
         {
 
-            if (txtTimKiem.Text.Trim() == "")
-            {
-                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
-                return;
-            }
-            else
-            {
-                if (cbTimKiem.Text == "Mã khách hàng")
-                {
-                    DataGridView.DataSource = GetDataToTable("select * from KHACHHANG where MAKH like '%" + txtTimKiem.Text.Trim() + "%'");
-                }
-
-                if (cbTimKiem.Text == "Tên khách hàng")
-                {
-                    DataGridView.DataSource = GetDataToTable("select * from KHACHHANG where TENKH like '%" + txtTimKiem.Text.Trim() + "%'");
-                }
-
-            }
+            
         }
 
 
