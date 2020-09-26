@@ -215,7 +215,6 @@ namespace QuanLyKhoHang
                 MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
             if (txtma.Text == "")
             {
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -368,7 +367,24 @@ namespace QuanLyKhoHang
         private void btnTim_Click(object sender, EventArgs e)
         {
 
-            
+            if (txtTimKiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                if (cbTimKiem.Text == "Mã khách hàng")
+                {
+                    DataGridView.DataSource = GetDataToTable("select * from KHACHHANG where MAKH like '%" + txtTimKiem.Text.Trim() + "%'");
+                }
+
+                if (cbTimKiem.Text == "Tên khách hàng")
+                {
+                    DataGridView.DataSource = GetDataToTable("select * from KHACHHANG where TENKH like '%" + txtTimKiem.Text.Trim() + "%'");
+                }
+
+            }
         }
 
 
@@ -388,7 +404,10 @@ namespace QuanLyKhoHang
 
         private void btnIndanhsach_Click(object sender, EventArgs e)
         {
-            
+            SaveFileDialog fsave = new SaveFileDialog();
+
+            fsave.Filter = "(Tất cả các tệp)|*.*|(các tệp excel)|*.xlsx";
+            fsave.ShowDialog();
 
             if (fsave.FileName != "")
             {
