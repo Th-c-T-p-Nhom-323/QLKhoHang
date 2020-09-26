@@ -83,16 +83,30 @@ namespace QuanLyKhoHang
             }
         }
 
-        //Chưa làm
+        
         private void bt_them_Click(object sender, EventArgs e)
         {
-            
+            cleartext();
+            tbx_tendm.Focus();
+            Enable();
+            tbx_madm.Enabled = false;
+            key = 1;
+            bt_them.Enabled = false;
+            bt_xoa.Enabled = false;
+            bt_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
         }
 
-        //Chưa làm
+       
         private void bt_xoa_Click(object sender, EventArgs e)
         {
-            
+            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
+            bt_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            key = 3;
+            Disable();
+            tbx_madm.Enabled = true;
         }
 
         //Chưa làm
