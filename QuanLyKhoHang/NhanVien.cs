@@ -185,22 +185,38 @@ namespace QuanLyKhoHang
             key = 1;
         }
 
-        //Chưa làm
+        
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            
+            Disablebtn();
+            Enabletbx();
+            tbx_MaNV.Enabled = false;
+            key = 2;
+            if (keyall == 4)
+            {
+                cbx_trangthai.Enabled = true;
+            }
         }
 
-        //Chưa làm
+       
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            
+            Disablebtn();
+            Disabletbx();
+            // btn_file.Enabled = false;
+            tbx_MaNV.Enabled = true;
+            tbx_MaNV.Focus();
+            key = 3;
         }
 
-        //Chưa làm
+        
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
-            
+            Disablebtn();
+            Disabletbx();
+            //btn_file.Enabled = false;
+            tbx_MaNV.Enabled = true;
+            tbx_MaNV.Focus()
         }
 
         //Chưa làm
