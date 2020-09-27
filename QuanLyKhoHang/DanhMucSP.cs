@@ -109,23 +109,105 @@ namespace QuanLyKhoHang
             tbx_madm.Enabled = true;
         }
 
-        //Chưa làm
+        
         private void bt_chophepsua_Click(object sender, EventArgs e)
         {
-            
+            Enable();
+            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
+            bt_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            key = 2;
+            tbx_madm.Enabled = false;
         }
 
-        //Chưa làm
+       
         public DataTable ThongTinMaKho(string Text)
         {
-            
+            SqlDataReader a = con.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + Text + "'");
+            while (a.Read())
+            {
+                MAKHO = a["MAKHO"].ToString().Trim();
+            }
+            return null;
         }
 
-        //Chưa làm
+       
         private void btn_ghinhan_Click(object sender, EventArgs e)
         {
+            if (key == 1)
+            {
+                if (tbx_tendm.Text == "" || tbx_makho.Text == "")
+                {
+                    MessageBox.Show("Hãy Nhập đủ thông tin vào các trường", "ThônG Báo");
+                    tbx_madm.Focus();
 
-            
+                }
+                else
+                {
+                    var itemMakho = tbx_makho.GetItemText(tbx_makho.SelectedItem);
+                    ThongTinMaKho(itemMakho);
+                    DataTable dtdm = con.CheckSql("SELECT * From DANHMUC where MADANHMUC='" + tbx_madm.Text + "'");
+                    if (dtdm.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Mã Danh Mục đã Tồn tại!", "Cảnh báo");
+                        tbx_madm.Clear();
+                        tbx_madm.Focus();
+                    }
+                    else
+                    {
+
+                        con.THEM_DANHMUC(tbx_madm.Text, tbx_tendm.Text, tbx_ghichu.Text, MAKHO);
+                        DanhMucSP_Load(sender, e);
+                        MessageBox.Show("Thêm THành Công Danh Mục!", "Thông Báo");
+                        //lb_thongbao.Text = "Thêm Thành Công";
+                        cleartext();
+                        tbx_tendm.Focus();
+                    }
+                }
+
+
+            }
+            if (key == 2)
+            {
+                if (tbx_madm.Text == "" || dgvDANHMUC.SelectedRows == null)
+                {
+                    MessageBox.Show("Hãy Nhập Mã Danh mục cần sửa đổi hoặc chọn trực tiếp trên bảng", "Cảnh báo");
+                    tbx_madm.Focus();
+                }
+                else
+                {
+                    var itemMakho = tbx_makho.GetItemText(tbx_makho.SelectedItem);
+                    ThongTinMaKho(itemMakho);
+                    con.SUA_DANHMUC(tbx_madm.Text, tbx_tendm.Text, tbx_ghichu.Text, MAKHO);
+                    DanhMucSP_Load(sender, e);
+                    cleartext();
+                    //lb_thongbao.Text = "Sửa Thành Công";
+
+                }
+            }
+            if (key == 3)
+            {
+                if (tbx_madm.Text == "" || dgvDANHMUC.SelectedRows == null)
+                {
+                    MessageBox.Show("Hãy Nhập thông tin mã Danh Mục cần xóa hoặc chọn trên Bảng Dữ liệu");
+                    tbx_madm.Focus();
+                    tbx_madm.Enabled = true;
+                    tbx_madm.BackColor = Color.White;
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn có Chắc chắn muốn xóa danh mục này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        con.XOA_DANHMUC("UPDATE SANPHAM SET MADANHMUC=NULL WHERE MADANHMUC='" + tbx_madm.Text + "'");
+                        con.XOA_DANHMUC(tbx_madm.Text);
+                        DanhMucSP_Load(sender, e);
+                        //lb_thongbao.Text = "Xóa Thành Công";
+                        cleartext();
+                    }
+                }
+            }
+
         }
 
         //Chưa làm
