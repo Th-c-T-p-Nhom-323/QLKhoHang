@@ -210,10 +210,10 @@ namespace QuanLyKhoHang
 
         }
 
-        //Chưa làm
+        
         private void button_lammoi_Click(object sender, EventArgs e)
         {
-            
+            DanhMucSP_Load(sender, e);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -221,28 +221,50 @@ namespace QuanLyKhoHang
             cleartext();
         }
 
-        //Chưa làm
+       
         private void btn_Timkiem_Click(object sender, EventArgs e)
         {
-            
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dgvDANHMUC.DataSource = con.Select_Data("SELECT DM.MADANHMUC,TENDANHMUC,KHOHANG.TENKHO,DM.GHICHU from DANHMUC DM left join KHOHANG on KHOHANG.MAKHO=DM.MAKHO WHERE ( MADANHMUC like N'%" + tbx_timkiem.Text + "%' OR TENDANHMUC like N'%" + tbx_timkiem.Text + "%' OR KHOHANG.TENKHO like N'%" + tbx_timkiem.Text + "%' OR DM.GHICHU like N'%" + tbx_timkiem.Text + "%' )");
+                tbx_timkiem.Clear();
+                dgvDANHMUC.ClearSelection();
+            }
         }
 
-        //Chưa làm
+        
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            DanhMucSP_Load(sender, e);
         }
 
-        //Chưa làm
+       
         private void dgvDANHMUC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                tbx_madm.Text = dgvDANHMUC.CurrentRow.Cells["MADANHMUC"].Value.ToString().Trim();
+                tbx_tendm.Text = dgvDANHMUC.CurrentRow.Cells["TENDANHMUC"].Value.ToString().Trim();
+                tbx_makho.Text = dgvDANHMUC.CurrentRow.Cells["TENKHO"].Value.ToString().Trim();
+                tbx_ghichu.Text = dgvDANHMUC.CurrentRow.Cells["GHICHU"].Value.ToString().Trim();
+            }
         }
 
-        //Chưa làm
+        
         private void tbx_madm_TabIndexChanged(object sender, EventArgs e)
         {
-            
+            DataTable dtdm = con.CheckSql("SELECT * From DANHMUC where MADANHMUC='" + tbx_madm.Text + "'");
+            if (dtdm.Rows.Count > 0)
+            {
+                MessageBox.Show("Mã Danh Mục đã Tồn tại!", "Cảnh báo");
+                tbx_madm.Clear();
+                tbx_madm.Focus();
+            }
         }
 
         private void DanhMucSP_FormClosed(object sender, FormClosedEventArgs e)
