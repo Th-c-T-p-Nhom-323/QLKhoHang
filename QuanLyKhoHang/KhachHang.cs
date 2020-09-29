@@ -29,7 +29,7 @@ namespace QuanLyKhoHang
         public static void Connect()
         {
             Con = new SqlConnection();   //Khởi tạo đối tượng
-            Con.ConnectionString = @"Data Source=DESKTOP-EJJ3P12;Initial Catalog=QLKH;Integrated Security=True";
+            Con.ConnectionString = @"Data Source=DESKTOP-EJJ3P12;Initial Catalog=QLKhoHang;Integrated Security=True";
             Con.Open();//mở kết nối
             //kiểm tra kết nối
             if (Con.State == ConnectionState.Open)

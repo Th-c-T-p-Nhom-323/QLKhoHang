@@ -14,7 +14,7 @@ namespace QuanLyKhoHang
 {
     public partial class NhapXuat : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=MSI;Initial Catalog=QLKH;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=QLKH;Integrated Security=True");
         public NhapXuat()
         {
             InitializeComponent();

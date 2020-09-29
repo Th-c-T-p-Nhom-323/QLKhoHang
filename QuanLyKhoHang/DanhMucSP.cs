@@ -38,7 +38,7 @@ namespace QuanLyKhoHang
             tbx_madm.Enabled = true; tbx_makho.Enabled = true; tbx_tendm.Enabled = true; tbx_ghichu.Enabled = true; tbx_tendm.Focus();
         }
 
-       
+
         private void DanhMucSP_Load(object sender, EventArgs e)
         {
             tbx_madm.Text = " ";
@@ -83,7 +83,6 @@ namespace QuanLyKhoHang
             }
         }
 
-        
         private void bt_them_Click(object sender, EventArgs e)
         {
             cleartext();
@@ -97,7 +96,6 @@ namespace QuanLyKhoHang
             btn_ghinhan.Enabled = true;
         }
 
-       
         private void bt_xoa_Click(object sender, EventArgs e)
         {
             bt_xoa.Enabled = false;
@@ -109,7 +107,6 @@ namespace QuanLyKhoHang
             tbx_madm.Enabled = true;
         }
 
-        
         private void bt_chophepsua_Click(object sender, EventArgs e)
         {
             Enable();
@@ -121,7 +118,6 @@ namespace QuanLyKhoHang
             tbx_madm.Enabled = false;
         }
 
-       
         public DataTable ThongTinMaKho(string Text)
         {
             SqlDataReader a = con.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + Text + "'");
@@ -132,9 +128,9 @@ namespace QuanLyKhoHang
             return null;
         }
 
-       
         private void btn_ghinhan_Click(object sender, EventArgs e)
         {
+
             if (key == 1)
             {
                 if (tbx_tendm.Text == "" || tbx_makho.Text == "")
@@ -207,10 +203,8 @@ namespace QuanLyKhoHang
                     }
                 }
             }
-
         }
 
-        
         private void button_lammoi_Click(object sender, EventArgs e)
         {
             DanhMucSP_Load(sender, e);
@@ -221,7 +215,6 @@ namespace QuanLyKhoHang
             cleartext();
         }
 
-       
         private void btn_Timkiem_Click(object sender, EventArgs e)
         {
             if (tbx_timkiem.Text.Trim() == "")
@@ -237,13 +230,11 @@ namespace QuanLyKhoHang
             }
         }
 
-        
         private void button1_Click(object sender, EventArgs e)
         {
             DanhMucSP_Load(sender, e);
         }
 
-       
         private void dgvDANHMUC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -255,7 +246,6 @@ namespace QuanLyKhoHang
             }
         }
 
-        
         private void tbx_madm_TabIndexChanged(object sender, EventArgs e)
         {
             DataTable dtdm = con.CheckSql("SELECT * From DANHMUC where MADANHMUC='" + tbx_madm.Text + "'");

@@ -79,17 +79,23 @@ namespace QuanLyKhoHang
 
         private void btn_sanpham_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            SANPHAM nhanvien = new SANPHAM();
+            nhanvien.ShowDialog();
         }
 
         private void btn_baocao_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            HuongDan nhanvien = new HuongDan();
+            nhanvien.ShowDialog();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show("Bạn Phải là ADMIN thì mới đổi được mật khẩu cho tài khoản khác!");
+            Doimatkhau dmk = new Doimatkhau();
+            dmk.ShowDialog();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -99,17 +105,28 @@ namespace QuanLyKhoHang
 
         private void ngườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            NguoiDung ND = new NguoiDung();
+            ND.ShowDialog();
         }
 
         private void đổiQuyềnHạnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
+            {
+                DoiQuyen quyen = new DoiQuyen();
+                quyen.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Phải là ADMIN thì mới thực hiện được thao tác này!");
+            } 
         }
 
         private void btn_huongdan_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            HuongDan hd = new HuongDan();
+            hd.ShowDialog();
         }
 
         private void lbx_title_Click(object sender, EventArgs e)

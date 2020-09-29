@@ -64,7 +64,7 @@ namespace QuanLyKhoHang
             cmd.Parameters.AddWithValue("MAKHO", txt_maKho.Text);
             cmd.Parameters.AddWithValue("TENKHO", txt_tenkho.Text);
             cmd.Parameters.AddWithValue("TONGSODMSP", txt_soluong.Text);
-            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);
+            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);            
             cmd.ExecuteNonQuery();
             con.Close();
             Show();
@@ -78,7 +78,7 @@ namespace QuanLyKhoHang
             cmd.Parameters.AddWithValue("MAKHO", txt_timkiem.Text);
             cmd.Parameters.AddWithValue("TENKHO", txt_tenkho.Text);
             cmd.Parameters.AddWithValue("TONGSODMSP", txt_soluong.Text);
-            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);
+            cmd.Parameters.AddWithValue("GHICHU", txt_ghichu.Text);           
             cmd.ExecuteNonQuery();
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();

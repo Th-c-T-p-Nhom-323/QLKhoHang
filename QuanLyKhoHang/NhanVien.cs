@@ -126,9 +126,9 @@ namespace QuanLyKhoHang
             return null;
         }
 
-      
         private void NhanVien_Load(object sender, EventArgs e)
         {
+
             Disabletbx();
             Enablebtn();
             lbx_trangthai.Visible = false;
@@ -174,7 +174,6 @@ namespace QuanLyKhoHang
             {
                 btn_xoa.Enabled = false;
             }
-
         }
 
         private void btn_them_Click(object sender, EventArgs e)
@@ -185,7 +184,6 @@ namespace QuanLyKhoHang
             key = 1;
         }
 
-        
         private void btn_sua_Click(object sender, EventArgs e)
         {
             Disablebtn();
@@ -198,28 +196,26 @@ namespace QuanLyKhoHang
             }
         }
 
-       
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             Disablebtn();
             Disabletbx();
-            // btn_file.Enabled = false;
+           // btn_file.Enabled = false;
             tbx_MaNV.Enabled = true;
             tbx_MaNV.Focus();
             key = 3;
         }
 
-        
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
             Disablebtn();
             Disabletbx();
             //btn_file.Enabled = false;
             tbx_MaNV.Enabled = true;
-            tbx_MaNV.Focus()
+            tbx_MaNV.Focus();
+            key = 3;
         }
 
-        
         private void button1_Click(object sender, EventArgs e)
         {
             if (tbx_timkiem.Text.Trim() == "")
@@ -244,7 +240,6 @@ namespace QuanLyKhoHang
             }
         }
 
-        
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -295,7 +290,7 @@ namespace QuanLyKhoHang
                 tbx_chucvu.Text = dgvNhanVien.CurrentRow.Cells["CHUCVU"].Value.ToString().Trim();
                 dateTimePicker_NS.Text = dgvNhanVien.CurrentRow.Cells["NS"].Value.ToString().Trim();
                 filename = dgvNhanVien.CurrentRow.Cells["HINHANH"].Value.ToString().Trim();
-
+                
             }
         }
 
@@ -314,7 +309,6 @@ namespace QuanLyKhoHang
             menu.ShowDialog();
         }
 
-      
         private void btn_ghinhan_Click(object sender, EventArgs e)
         {
             if (key == 1)

@@ -46,7 +46,7 @@ namespace QuanLyKhoHang
                 MainMenu.Quyenhan = QuyenHan;
                 NguoiDung.QuyenHan = QuyenHan;
                 NguoiDung.TenDangNhap = tbx_username.Text;
-                // HuongDan.TenDangNhap = tbx_username.Text;
+               // HuongDan.TenDangNhap = tbx_username.Text;
                 Doimatkhau.USERNAME = tbx_username.Text;
                 DoiQuyen.USERNAME = tbx_username.Text;
                 Doimatkhau.QUYENHAN = QuyenHan;
@@ -82,7 +82,7 @@ namespace QuanLyKhoHang
                     MainMenu.Quyenhan = QuyenHan;
                     NguoiDung.QuyenHan = QuyenHan;
                     NguoiDung.TenDangNhap = tbx_username.Text;
-                    // HuongDan.TenDangNhap = tbx_username.Text;
+                   // HuongDan.TenDangNhap = tbx_username.Text;
                     Doimatkhau.USERNAME = tbx_username.Text;
                     DoiQuyen.USERNAME = tbx_username.Text;
                     Doimatkhau.QUYENHAN = QuyenHan;
@@ -91,8 +91,8 @@ namespace QuanLyKhoHang
                     MessageBox.Show("Bạn Đang Là: " + QuyenHan + "");
                     this.Hide();
                     MainMenu menu = new MainMenu();
-
-
+                    
+                        
                     menu.ShowDialog();
                 }
                 else
